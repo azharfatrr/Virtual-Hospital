@@ -8,9 +8,9 @@ ENV PORT 5000
 WORKDIR /app
 
 # Build dependencies.
-COPY ["package.json", "package-lock.json", "./"]
+COPY ["package.json", "./"]
 
-RUN npm install --development
+RUN yarn install
 
 COPY . .
 
