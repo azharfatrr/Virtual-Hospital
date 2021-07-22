@@ -33,7 +33,7 @@ export default
       max: 20,
     },
     migration: {
-      directory: `./migrations`,
+      directory: './migrations',
       tableName: 'knex_migrations',
     },
   },
