@@ -1,5 +1,9 @@
 FROM node:14
 
+# Install global files
+RUN ["yarn", "global", "add",  "knex"]
+RUN ["yarn", "global", "add",  "typescript"]
+
 # Set environment
 ENV NODE_ENV development
 ENV PORT 5000

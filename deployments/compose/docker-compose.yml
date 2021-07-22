@@ -12,10 +12,10 @@ services:
       context: ../../
       dockerfile: builds/server/Dockerfile
     # Including env file.
-    env_file: ../../builds/server/.env
+    env_file: ../../.env
     # Ports for connecting Docker Container with outside world.
     ports:
-      - 5000:5000
+      - 8000:8000
     # The networks between containers.
     networks:
       - dbconnect
@@ -25,14 +25,14 @@ services:
   # Database service.
   mariadb:
     # The name of container.
-    container_name: mariadb-dev
+    container_name: mariadb-vhs-dev
     # Building Docker File.
     build: ../../builds/database
     # Including env file.
-    env_file: ../../builds/database/.env
+    env_file: ../../.env
     # Ports for connecting Docker Container with outside world.
     ports:
-      - 3306:3306
+      - 3308:3306
     # The networks between containers.
     networks:
       - dbconnect
