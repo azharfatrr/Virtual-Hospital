@@ -22,6 +22,7 @@ class User extends Generic {
   // Get public data of user.
   getPublicData() {
     return {
+      id: this.id,
       firstName: this.firstName,
       lastName: this.lastName,
       picture: this.picture,
@@ -40,9 +41,6 @@ class User extends Generic {
  */
 export const isUser = (input: any): input is User => {
   try {
-    // Check if input is instance of User.
-    if (!(input instanceof User)) return false;
-
     // Validate the type of input
     if (typeof input.firstName !== 'string') return false;
     if (typeof input.lastName !== 'string') return false;
@@ -50,7 +48,7 @@ export const isUser = (input: any): input is User => {
     if (typeof input.password !== 'string') return false;
     if (typeof input.email !== 'string') return false;
 
-    // TODO: Validate if picture is valid
+    // TODO: Validate if picture is valid.
 
     // Validate the role
     if (input.role !== 'admin' && input.role !== 'user') return false;

@@ -1,6 +1,6 @@
 import express from 'express';
 import {
-  getUserAll, getUserByID, createUser, updateUser, deleteUser,
+  getUserAll, getUserByID, createUser, updateUser, deleteUser, getUserPagination,
 } from '../handlers/user';
 
 /**
@@ -15,6 +15,8 @@ const r = express.Router();
  */
 // Get all users.
 r.get('/users', getUserAll);
+// Get all users.
+r.get('/users/pagination', getUserPagination);
 // Get a user by id.
 r.get('/users/:userId', getUserByID);
 // Create a user.

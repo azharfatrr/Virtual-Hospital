@@ -5,6 +5,7 @@ import { isValidId } from '../helpers/validator';
 import { apiVersion } from '../configs/server';
 import { captureErrorLog } from '../helpers/log';
 import User, { isUser } from '../models/User';
+import { queryBuilder } from '../helpers/query_builder';
 
 const userLogger = log4js.getLogger('user');
 
@@ -29,7 +30,6 @@ export const getUserAll = async (req: Request, res: Response) => {
     return res.status(500).json({
       apiVersion,
       error: {
-        code: 500,
         message: 'Could not get all user',
       },
     });
@@ -51,7 +51,6 @@ export const getUserByID = async (req: Request, res: Response) => {
       return res.status(400).json({
         apiVersion,
         error: {
-          code: 400,
           message: 'Failed during input validation',
         },
       });
@@ -64,7 +63,6 @@ export const getUserByID = async (req: Request, res: Response) => {
       return res.status(404).json({
         apiVersion,
         error: {
-          code: 404,
           message: 'User with specified id not exist',
         },
       });
@@ -73,7 +71,7 @@ export const getUserByID = async (req: Request, res: Response) => {
     // Return response with user public data.
     return res.json({
       apiVersion,
-      data: user.getPublicData,
+      data: user.getPublicData(),
     });
   } catch (err) {
     captureErrorLog(userLogger, 'Could not get user data', err);
@@ -82,7 +80,6 @@ export const getUserByID = async (req: Request, res: Response) => {
     return res.status(500).json({
       apiVersion,
       error: {
-        code: 500,
         message: 'Could not get user data',
       },
     });
@@ -104,7 +101,6 @@ export const createUser = async (req: Request, res: Response) => {
       return res.status(400).json({
         apiVersion,
         error: {
-          code: 400,
           message: 'Failed during input validation',
         },
       });
@@ -125,7 +121,6 @@ export const createUser = async (req: Request, res: Response) => {
     return res.status(500).json({
       apiVersion,
       error: {
-        code: 500,
         message: 'Could not create user data',
       },
     });
@@ -150,7 +145,6 @@ export const updateUser = async (req: Request, res: Response) => {
       return res.status(400).json({
         apiVersion,
         error: {
-          code: 400,
           message: 'Failed during input validation',
         },
       });
@@ -161,7 +155,6 @@ export const updateUser = async (req: Request, res: Response) => {
       return res.status(400).json({
         apiVersion,
         error: {
-          code: 400,
           message: 'Failed during input validation',
         },
       });
@@ -169,6 +162,15 @@ export const updateUser = async (req: Request, res: Response) => {
 
     // Update and fetch user data.
     const user = await User.query().updateAndFetchById(userId, reqBody);
+    // User is not found
+    if (!user) {
+      return res.status(404).json({
+        apiVersion,
+        error: {
+          message: 'User with specified id not exist',
+        },
+      });
+    }
 
     // Return response with user data.
     return res.status(201).json({
@@ -182,7 +184,6 @@ export const updateUser = async (req: Request, res: Response) => {
     return res.status(500).json({
       apiVersion,
       error: {
-        code: 500,
         message: 'Could not update user data',
       },
     });
@@ -227,6 +228,87 @@ export const deleteUser = async (req: Request, res: Response) => {
       error: {
         code: 500,
         message: 'Could not delete user data',
+      },
+    });
+  }
+};
+
+/**
+ * GET /api/v1/users/pagination
+ * getUsersPagination is a function for handle request getting users with pagination.
+ * @param req.query - pagination query.
+ * @param req.query.page - page number.
+ * @param req.query.limit - limit of items per page.
+ * @param req.query.sort - sort query by some column.
+ * @param req.query.query - the query of item by specific value. Check the documentation.
+ */
+export const getUserPagination = async (req: Request, res: Response) => {
+  try {
+    // Get query params.
+    const {
+      query, sort, page, limit,
+    } = req.query;
+
+    // Create query builder
+    let qBuilder = User.query();
+    // Add query params to query builder.
+    if (query) {
+      // The query must be in encoded base64 and encoded to safe URI.
+      qBuilder = queryBuilder(query.toString(), qBuilder);
+    }
+
+    // Add sort params to query builder.
+    if (sort) {
+      let columnName = `${sort}`;
+      let order: Objection.OrderByDirection = 'asc';
+
+      if (columnName[0] === '-') {
+        columnName = columnName.substring(1);
+        order = 'desc';
+      }
+
+      qBuilder = qBuilder.orderBy(columnName, order);
+    }
+
+    // Parse pageIndex.
+    const pageIdx = Number.isNaN(parseInt(`${page}`, 10))
+      ? 1
+      : parseInt(`${page}`, 10);
+
+    // Parse itemsPerPage.
+    const pageItem = Number.isNaN(parseInt(`${limit}`, 10))
+      ? 10
+      : parseInt(`${limit}`, 10);
+
+    // result is a variable that contain the result pagination
+    const result = await qBuilder.page(pageIdx - 1, pageItem);
+
+    // Output item only public data.
+    const resItem = result.results.map((user) => user.getPublicData());
+
+    // Return response with user data.
+    return res.json({
+      apiVersion,
+      data: {
+        currentItemCount: result.results.length,
+        query: query ? `${query}` : '',
+        sort: sort ? `${sort}` : 'id',
+        pageIndex: pageIdx,
+        itemsPerPage: pageItem,
+        totalItems: result.total,
+        totalPages: Math.round(result.total / pageItem + 0.5),
+        items: resItem,
+      },
+    });
+  } catch (err) {
+    captureErrorLog(userLogger, 'Could not get pagination user data', err);
+
+    // Return error response.
+    return res.status(500).json({
+      apiVersion,
+      error: {
+        code: 500,
+        message: 'Could not get pagination user data',
       },
     });
   }
