@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import log4js from 'log4js';
 import Objection from 'objection';
+
 import { isValidId } from '../helpers/validator';
 import { apiVersion } from '../configs/server';
 import { captureErrorLog } from '../helpers/log';
@@ -24,13 +25,16 @@ export const getUserAll = async (req: Request, res: Response) => {
       data: allUser,
     });
   } catch (err) {
-    captureErrorLog(userLogger, 'Could not get all user', err);
+    // Create error message.
+    const message = 'Could not get all user';
+    // Capture error message to log.
+    captureErrorLog(userLogger, message, err);
 
     // Return error response.
     return res.status(500).json({
       apiVersion,
       error: {
-        message: 'Could not get all user',
+        message,
       },
     });
   }
@@ -254,20 +258,30 @@ export const getUserPagination = async (req: Request, res: Response) => {
     // Add query params to query builder.
     if (query) {
       // The query must be in encoded base64 and encoded to safe URI.
-      qBuilder = queryBuilder(query.toString(), qBuilder);
+      // Column name must be in snake case format.
+      try {
+        qBuilder = queryBuilder(query.toString(), qBuilder);
+      } catch (err) {
+        captureErrorLog(userLogger, 'Add query params to query builder error', err);
+      }
     }
 
     // Add sort params to query builder.
     if (sort) {
       let columnName = `${sort}`;
+      // If sort direction is not specified, set it to asc.
       let order: Objection.OrderByDirection = 'asc';
-
+      // If sort direction is specified, check if it desc.
       if (columnName[0] === '-') {
         columnName = columnName.substring(1);
         order = 'desc';
       }
 
-      qBuilder = qBuilder.orderBy(columnName, order);
+      try {
+        qBuilder = qBuilder.orderBy(columnName, order);
+      } catch (err) {
+        captureErrorLog(userLogger, 'Add sort params to query builder error', err);
+      }
     }
 
     // Parse pageIndex.
@@ -290,11 +304,11 @@ export const getUserPagination = async (req: Request, res: Response) => {
     return res.json({
       apiVersion,
       data: {
-        currentItemCount: result.results.length,
         query: query ? `${query}` : '',
         sort: sort ? `${sort}` : 'id',
-        pageIndex: pageIdx,
-        itemsPerPage: pageItem,
+        page: pageIdx,
+        limit: pageItem,
+        pageItems: result.results.length,
         totalItems: result.total,
         totalPages: Math.round(result.total / pageItem + 0.5),
         items: resItem,

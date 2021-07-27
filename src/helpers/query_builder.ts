@@ -102,31 +102,30 @@ export const queryBuilder = (inputQuery: string, qBuilder: Objection.QueryBuilde
   let decodedQuery = decodeURI(inputQuery);
   decodedQuery = decodeBase64(decodedQuery);
 
-  // Join every Andwhere condition.
-  qBuilderNew = qBuilderNew.where((andBuilder) => {
-    // Split the query by ';'.
-    const andQueries = decodedQuery.split(';');
+  // Split the query by ';'.
+  const andQueries = decodedQuery.split(';');
 
-    // Iterate over each query in andQueries.
-    andQueries.forEach((andSubQuery) => {
-      // Join every or where condition.
-      // eslint-disable-next-line no-param-reassign
-      andBuilder = andBuilder.andWhere((orBuilder) => {
-        // Split the query by ','.
-        const orQueries = andSubQuery.split('|');
+  // Iterate over each query in andQueries.
+  andQueries.forEach((andSubQuery) => {
+    // Join every andWhere condition.
+    qBuilderNew = qBuilderNew.andWhere((orBuilder) => {
+      // The orBuilder is like building or condition in between and condition.
+      // For example: (a v b) ^ (c v d). orBuilder now is building (a v b) and then (c v d).
 
-        // Iterate over each query in orQueries.
-        orQueries.forEach((orSubQuery) => {
-          // Get the orSubQuery condition.
-          const queryParams = queryParser(orSubQuery);
-          if (queryParams) {
-            // Get the column, operator and query from queryParams.
-            const { column, operator, query } = queryParams;
-            // Add to orBuilder.
-            // eslint-disable-next-line no-param-reassign
-            orBuilder = orBuilder.orWhere(column, operator, query);
-          }
-        });
+      // Split the query by ','.
+      const orQueries = andSubQuery.split('|');
+
+      // Iterate over each query in orQueries.
+      orQueries.forEach((orSubQuery) => {
+        // Get the orSubQuery condition.
+        const queryParams = queryParser(orSubQuery);
+        if (queryParams) {
+          // Get the column, operator and query from queryParams.
+          const { column, operator, query } = queryParams;
+          // Join every orWhere condition.
+          // eslint-disable-next-line no-param-reassign
+          orBuilder = orBuilder.orWhere(column, operator, query);
+        }
       });
     });
   });

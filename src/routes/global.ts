@@ -1,4 +1,5 @@
 import express from 'express';
+
 import {
   getUserAll, getUserByID, createUser, updateUser, deleteUser, getUserPagination,
 } from '../handlers/user';
