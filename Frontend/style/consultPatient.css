@@ -1,0 +1,227 @@
+body {
+     background: #fff4e3;
+}
+
+.header {
+     position: absolute;
+     width: 1366px;
+     height: 43px;
+     top: 0px;
+     left: -0px;
+
+     background: #561A4B;
+}
+.header .logo {
+     position: relative;
+     width: 32px;
+     height: 32px;
+     left: 670px;
+     top: 4.5px;
+     filter: invert(1);
+     z-index: 1;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+}
+
+.container .vidCall {
+     position: absolute;
+     width: 891px;
+     height: 503px;
+     left: 16px;
+     top: 55px;
+
+     background: rgba(255, 205, 57, 0.53);
+     border-radius: 20px;
+}
+.container .title {
+     position: absolute;
+     width: 370px;
+     height: 29px;
+     left: 277px;
+     top: 574px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 60px;
+     display: flex;
+     align-items: center;
+
+     color: #561A4B;
+}
+.container .stats {
+     position: absolute;
+     width: 411px;
+     height: 219px;
+     left: 923px;
+     top: 55px;
+
+     background: rgba(255, 205, 57, 0.53);
+     border-radius: 20px;
+}
+
+.container .chatbox {
+     position: absolute;
+     width: 411px;
+     height: 332px;
+     left: 923px;
+     top: 282px;
+
+     background: #561A4B;
+     border-radius: 20px;
+}
+.container .chatbox .headChat {
+     position: absolute;
+     width: 411px;
+     height: 42px;
+     background:rgba(255, 231, 158, 0.878);
+     border-radius: 20px 20px 0px 0px;
+}
+
+.container .chatbox .headChat .isOnline {
+     border-radius: 50%;
+     position: absolute;
+     height: 15px;
+     width: 15px;
+     background: #58ff50;
+     border: #561A4B;
+     border-style: solid;
+     border-width: thin;
+     left: 20px;
+     top: 13px;
+}
+.container .chatbox .headChat .doctorName {
+     position: absolute;
+     top: -9px;
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 17px;
+     line-height: 60px;
+     display: flex;
+     align-items: center;
+
+     color: #561A4B;
+     text-indent: 50px;
+}
+
+.container .chatbox .talk-bubble1 {
+     margin: 0px;
+     display: inline-block;
+     position: absolute;
+	width: 200px;
+	height: auto;
+     left: 19px;
+     top: 58px;
+	background-color: lightyellow;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+}
+
+.container .chatbox .talk-bubble2 {
+     margin: 0px;
+     display: inline-block;
+     position: absolute;
+	width: 200px;
+	height: auto;
+     left: 194px;
+     top: 120px;
+	background-color: khaki;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+}
+
+.container .chatbox .round {
+     border-radius: 20px;
+     -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+     right: auto;
+     top: auto;
+	bottom: -14px;
+	border: 12px solid;
+	border-color: lightyellow transparent transparent lightyellow;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+     left: auto;
+	right: 38px;
+	bottom: -14px;
+	border: 12px solid;
+	border-color: khaki khaki transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext{
+     padding: 1em;
+     text-align: left;
+     line-height: 1.5em;
+}
+.talktext p{
+/* remove webkit p margins */
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+}
+
+.container textarea {
+     position:absolute;
+     border-radius: 10px;
+     top: 260px;
+     left: 10px;
+     width: 350px;
+     padding: 15px;
+     margin: 5px 0 0px 0;
+     border: none;
+     background: rgb(255, 255, 255);
+     z-index: 1;
+     font-family: Arial, Helvetica, sans-serif;  
+}
+
+.container .chatbox .send {
+     position: absolute;
+     width: 26px;
+     height: 26px;
+     left: 370px;
+     top: 282px;
+     filter: invert(1);
+     z-index: 1;
+     cursor: pointer;
+}
