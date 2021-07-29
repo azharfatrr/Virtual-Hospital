@@ -1,0 +1,40 @@
+<html>
+     <head>
+          <title>Virtual Hospital</title>
+          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+          <link href="../style/kesehatan.css" rel="stylesheet">
+     </head>
+     <body>
+          <div class="header">
+               <img onclick="document.location='./mainpage.html'" class="logo" src="../img/hospital.png" alt="hospital">
+          </div>
+          <div class="container">
+               <div class="text1">Kondisi</div>
+               <div class="text2"><strong>Kesehatanmu</strong></div>
+
+               <div class="indikator1">
+                    <label class="text-suhu">Suhu tubuh</label>
+                    <input type="text" class="suhu" id="suhu" name="suhu" placeholder="Untuk koma gunakan '.'">
+                    <button class="button-suhu" id="button-suhu">Simpan</button>
+               </div>
+               <div class="indikator2">
+                    <label class="text-nadi">Denyut nadi</label>
+                    <input type="text" class="nadi" id="nadi" name="nadi" placeholder="Dalam bpm">
+                    <button class="button-nadi" id="button-nadi">Simpan</button>
+               </div>
+               <div class="indikator3">
+                    <label class="text-saturasi">Tingkat saturasi O2</label>
+                    <input type="text" class="saturasi" id="saturasi" name="saturasi" placeholder="Dalam %">
+                    <button class="button-saturasi" id="button-saturasi">Simpan</button>
+               </div>
+               <div class="indikator4">
+                    <label class="text-tensi">Tekanan darah</label>
+                    <input type="text" class="tensi" id="tensi" name="tensi" placeholder="Format: 'sistolik/diastolik'">
+                    <button class="button-tensi" id="button-tensi">Simpan</button>
+               </div>
+
+               <button onclick="document.location='./mainpage.html'" class="back" id="back">Kembali</button>
+               <button onclick="document.location='./loading-kesehatan.html'" class="submit" id="submit">Selanjutnya</button>
+          </div>
+     </body>
+</html>

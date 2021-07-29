@@ -1,0 +1,122 @@
+body {
+     position: relative;
+     width: 360px;
+     height: 640px;
+
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+
+     background: #F9CF7A;
+     border-radius: 30px;
+}
+
+.container {
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+}
+
+.container .title {
+     position: absolute;
+     width: 274px;
+     height: 65px;
+     left: 79px;
+     top: 124px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 27px;
+     line-height: 40px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+
+     color: #561A4B;
+}
+
+.container .logo {
+     position: absolute;
+     width: 124px;
+     height: 121px;
+     left: 119px;
+     top: 206px;
+
+     /* display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%; */
+
+     background: #F9CF7A;
+}
+
+.container .email {
+     position: absolute;
+     width: 254px;
+     height: 42px;
+     left: 53px;
+     top: 370px;
+
+     background: #FFF4E3;
+     border-radius: 20px;
+
+     font-family:Poppins;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 15px;
+     line-height: 22px;
+
+     text-align: center;
+
+     color: #000000;
+     border: #000000;
+}
+
+.container .password {
+     position: absolute;
+     width: 254px;
+     height: 42px;
+     left: 53px;
+     top: 424px;
+
+     background: #FFF4E3;
+     border-radius: 20px;
+
+     font-family:Poppins;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 15px;
+     line-height: 22px;
+     /* identical to box height */
+
+     text-align: center;
+
+     color: #000000;
+     border: #000000;
+}
+
+.container .submit {
+     position: absolute;
+     width: 118px;
+     height: 42px;
+     left: 121px;
+     top: 496px;
+
+     background: #561A4B;
+     border-radius: 20px;
+
+     font-family:Poppins;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 15px;
+     line-height: 22px;
+     /* identical to box height */
+
+     text-align: center;
+
+     color: #FFFFFF;
+     cursor: pointer;
+
+}

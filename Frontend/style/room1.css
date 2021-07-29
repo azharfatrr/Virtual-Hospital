@@ -1,0 +1,252 @@
+body {
+     position: relative;
+     width: 360px;
+     height: 640px;
+
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+
+     background: #FFF4E3;
+     border-radius: 30px;
+}
+
+.header {
+     position: relative;
+     width: 360px;
+     height: 42px;
+     left: 0px;
+     top: 0px;
+     border-radius: 20px;
+
+     background: #561A4B;
+}
+
+.header .logo {
+     position: absolute;
+     width: 32px;
+     height: 32px;
+     left: 162px;
+     top: 4.5px;
+     filter: invert(1);
+     cursor: pointer;
+}
+
+.container {
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+}
+
+.container .text1 {
+     position: absolute;
+     width: 292px;
+     height: 129px;
+     left: 42px;
+     top: 35px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 24px;
+     line-height: 36px;
+     display: flex;
+     align-items: center;
+
+     color: #561A4B;
+}
+
+.container .text2 {
+     position: absolute;
+     width: 292px;
+     height: 129px;
+     left: 42px;
+     top: 67px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 24px;
+     line-height: 36px;
+     display: flex;
+     align-items: center;
+
+     color: #561A4B;
+}
+
+.container .indikator1 .box1 {
+     position: absolute;
+     width: 234px;
+     height: 79px;
+     left: 28px;
+     top: 181px;
+
+     background: rgba(255, 205, 57, 0.53);
+     border-radius: 20px;
+}
+
+.container .indikator1 .ind1 {
+     position: absolute;
+     width: 138px;
+     height: 41px;
+     left: 42px;
+     top: 203px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 25px;
+     line-height: 40px;
+     /* identical to box height */
+
+     display: flex;
+     align-items: center;
+     text-align: center;
+
+     color: #000000;
+}
+
+.container .indikator1 .checkbox1 {
+     position: absolute;
+     width: 67px;
+     height: 65px;
+     left: 385px;
+     top: 290px;
+
+     /* background: rgba(255, 229, 153, 0.53); */
+     transform: scale(4.5);
+     border-radius: 20px;
+}
+
+.container .indikator2 .box2 {
+     position: absolute;
+     width: 234px;
+     height: 79px;
+     left: 28px;
+     top: 295px;
+
+     background: rgba(255, 205, 57, 0.53);
+     border-radius: 20px;
+}
+
+.container .indikator2 .ind2 {
+     position: absolute;
+     width: 144px;
+     height: 41px;
+     left: 42px;
+     top: 314px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 25px;
+     line-height: 40px;
+     /* identical to box height */
+
+     display: flex;
+     align-items: center;
+     text-align: center;
+
+     color: #000000;
+}
+
+.container .indikator2 .checkbox2 {
+     position: absolute;
+     width: 67px;
+     height: 65px;
+     left: 385px;
+     top: 404px;
+
+     /* background: rgba(255, 229, 153, 0.53); */
+     transform: scale(4.5);
+     border-radius: 20px;
+}
+
+.container .indikator3 .box3 {
+     position: absolute;
+     width: 234px;
+     height: 79px;
+     left: 28px;
+     top: 409px;
+
+     background: rgba(255, 205, 57, 0.53);
+     border-radius: 20px;
+}
+
+.container .indikator3 .ind3 {
+     position: absolute;
+     width: 144px;
+     height: 41px;
+     left: 42px;
+     top: 428px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 25px;
+     line-height: 40px;
+     /* identical to box height */
+
+     display: flex;
+     align-items: center;
+     text-align: center;
+
+     color: #000000;
+}
+
+.container .indikator3 .checkbox3 {
+     position: absolute;
+     width: 67px;
+     height: 65px;
+     left: 385px;
+     top: 518px;
+
+     /* background: rgba(255, 229, 153, 0.53); */
+     transform: scale(4.5);
+     border-radius: 20px;
+}
+
+.container .back {
+     position: absolute;
+     width: 145px;
+     height: 41px;
+     left: 26px;
+     top: 530px;
+
+     background: #FFE599;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 21px;
+
+     text-align: center;
+
+     color: #000000;
+     cursor: pointer;
+}
+
+.container .submit {
+     position: absolute;
+     width: 144px;
+     height: 41px;
+     left: 187px;
+     top: 530px;
+
+     background: #561A4B;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 21px;
+     
+     text-align: center;
+
+     color: #FFF4E3;
+     cursor: pointer;
+}

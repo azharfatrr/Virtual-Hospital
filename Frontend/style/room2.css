@@ -1,0 +1,133 @@
+body {
+     position: relative;
+     width: 360px;
+     height: 640px;
+
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+
+     background: #fff4e3;
+     border-radius: 30px;
+}
+
+.header {
+     position: relative;
+     width: 360px;
+     height: 42px;
+     left: 0px;
+     top: 0px;
+     border-radius: 20px;
+
+     background: #561A4B;
+}
+
+.header .logo {
+     position: absolute;
+     width: 32px;
+     height: 32px;
+     left: 162px;
+     top: 4.5px;
+     filter: invert(1);
+     cursor: pointer;
+}
+
+.container {
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+}
+
+.container .text1 {
+     position: absolute;
+     width: 274px;
+     height: 65px;
+     left: 43px;
+     top: 64px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 27px;
+     line-height: 40px;
+     /* display: flex;
+     align-items: center; */
+     text-align: center;
+
+     color: #561A4B;
+}
+
+.container .text2 {
+     position: absolute;
+     width: 274px;
+     height: 65px;
+     left: 43px;
+     top: 101px;
+
+     font-family: Poppins;
+     font-style: normal;
+     /* font-weight: bold; */
+     font-size: 27px;
+     line-height: 40px;
+     /* display: flex;
+     align-items: center; */
+     text-align: center;
+
+     color: #561A4B;
+}
+
+.container .camera-placeholder {
+     position: absolute;
+     width: 305px;
+     height: 345px;
+     left: 27px;
+     top: 158px;
+
+     background: rgba(255, 205, 57, 0.53);
+     border-radius: 20px;
+}
+
+.container .back {
+     position: absolute;
+     width: 145px;
+     height: 41px;
+     left: 26px;
+     top: 530px;
+
+     background: #FFE599;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 21px;
+
+     text-align: center;
+
+     color: #000000;
+     cursor: pointer;
+}
+
+.container .submit {
+     position: absolute;
+     width: 144px;
+     height: 41px;
+     left: 187px;
+     top: 530px;
+
+     background: #561A4B;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 21px;
+     
+     text-align: center;
+
+     color: #FFF4E3;
+     cursor: pointer;
+}

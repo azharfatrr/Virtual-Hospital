@@ -1,0 +1,47 @@
+<html>
+     <head>
+          <title>Virtual Hospital</title>
+          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+          <link href="../style/mainpage.css" rel="stylesheet">
+     </head>
+     <body>
+          <div class="header">
+               <img onclick="document.location='./mainpage.html'" class="logo" src="../img/hospital.png" alt="hospital">
+          </div>
+          <div class="container">
+               <img class="profPic" src="../img/songhwa.jpg" alt="profPic">
+               <div class="greeting"><i><b>Halo, Mido!</b></i>
+                    <div class="doctorName">Nama Dokter: Dr. Agung</div>
+               </div>
+               <button onclick="document.location='./transition1.html'" class="checkRoom">Periksa kembali kondisi ruangan</button>
+
+               <div class="room-bar-purple">Kondisi ruangan</div>
+               <div class="level">level:</div>
+               <div class="room-desc">Sudahkah kamu ..?</div>
+               <button class="noButton">Belum</button>
+               <button class="yesButton">Sudah</button>
+
+               <div class="kesehatan-bar-purple">Kondisi kesehatan</div>
+               <div class="N"><b><i>Hari - 5</i></b></div>
+               <button onclick="document.location='./dayN.html'" class="buttonN">Lihat Laporan</button>
+               <button onclick="document.location='./dayN.html'" class="buttonN2">v</button>
+
+               <div class="dayBeforeN">
+                    <div class="N-1"><b><i>Hari - 4</i></b></div>
+                    <div class="N-2"><b><i>Hari - 3</i></b></div>
+               </div>
+
+               <div class="buttonBeforeN">
+                    <button onclick="document.location='./dayN.html'" class="button1-1">Lihat Laporan</button>
+                    <button onclick="document.location='./dayN.html'" class="button1-2">v</button>
+                    <button onclick="document.location='./dayN.html'" class="button2-1">Lihat Laporan</button>
+                    <button onclick="document.location='./dayN.html'" class="button2-2">v</button>
+               </div>
+
+               <button class="before">Hari Sebelumnya <b>>></b></button>
+
+               <button onclick="document.location='./kesehatan.html'" class="goToCheck">Cek kesehatan hari ini</button>
+               <button class="consult">Konsultasi dengan dokter</button>
+          </div>
+     </body>
+</html>

@@ -1,0 +1,558 @@
+body {
+     position: relative;
+     width: 360px;
+     height: 640px;
+
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+
+     background: #fff4e3;
+     border-radius: 30px;
+}
+
+.header {
+     position: relative;
+     width: 360px;
+     height: 42px;
+     left: 0px;
+     top: 0px;
+     border-radius: 20px;
+
+     background: #561A4B;
+}
+
+.header .logo {
+     position: absolute;
+     width: 32px;
+     height: 32px;
+     left: 162px;
+     top: 4.5px;
+     filter: invert(1);
+     z-index: 1;
+     cursor: pointer;
+}
+
+.container {
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+}
+
+.container .profPic {
+     position: absolute;
+     width: 75px;
+     height: 75px;
+     left: 49px;
+     top: 68px;
+
+     background: #F9CF7A;
+     border-radius: 50%;
+}
+
+.container .greeting {
+     position: absolute;
+     width: 150px;
+     height: 36px;
+     left: 170px;
+     top: 64px;
+
+     font-family: Poppins;
+     font-style: italic;
+     font-weight: 500;
+     font-size: 24px;
+     line-height: 36px;
+     text-align: center;
+
+     color: #561A4B;
+}
+
+.container .doctorName {
+     position: absolute;
+     width: 150px;
+     height: 26px;
+     left: 0px;
+     top: 22px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 11px;
+     line-height: 36px;
+     text-align: center;
+
+     color: #561A4B;
+}
+
+.container .checkRoom {
+     position: absolute;
+     width: 150px;
+     height: 19px;
+     left: 170px;
+     top: 120px;
+
+     background: #561A4B;
+     border: 1px solid #56124b;
+     box-sizing: border-box;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 7px;
+     line-height: 10px;
+     text-align: center;
+
+     color: #FFFFFF;
+     cursor: pointer;
+}
+
+.container .room-bar-purple {
+     position: absolute;
+     width: 292px;
+     height: 39px;
+     left: 34px;
+     top: 168px;
+
+     background: #561A4B;
+     border-radius: 20px 20px 0px 0px;
+
+     background: #561A4B;
+     border-radius: 20px 20px 0px 0px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 12px;
+     line-height: 18px;
+     text-indent: 10px;
+     /* identical to box height */
+
+     display: flex;
+     align-items: center;
+     text-align: center;
+
+     color: #FFF4E3;
+}
+
+.container .level {
+     position: absolute;
+     width: 142px;
+     height: 19px;
+     left: 171px;
+     top: 179px;
+
+     background: #F9CF7A;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 10px;
+     line-height: 20px;
+     text-align: center;
+
+     color: #000000;
+}
+
+.container .room-desc {
+     position: absolute;
+     width: 292px;
+     height: 62px;
+     left: 34px;
+     top: 207px;
+
+     background: rgba(255, 229, 153, 0.53);
+     border-radius: 0px 0px 20px 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 11px;
+     line-height: 22px;
+     text-indent: 5px;
+     /* identical to box height */
+     position: flex;
+     align-items: center;
+     /* text-align: center; */
+
+     color: #000000;
+}
+
+.container .noButton {
+     position: absolute;
+     width: 48px;
+     height: 19px;
+     left: 213px;
+     top: 240px;
+
+     background: #FFF4E3;
+     border: 1px solid #561A4B;
+     box-sizing: border-box;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     text-align: center;
+
+     color: #561A4B;
+     cursor: pointer;
+}
+
+.container .yesButton {
+     position: absolute;
+     width: 45px;
+     height: 19px;
+     left: 265px;
+     top: 240px;
+
+     background: #561A4B;
+     border: 1px solid #561A4B;
+     box-sizing: border-box;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     text-align: center;
+
+     color: #FFF4E3;
+     cursor: pointer;
+}
+
+.container .kesehatan-bar-purple {
+     position: absolute;
+     width: 292px;
+     height: 39px;
+     left: 37px;
+     top: 300px;
+
+     background: #561A4B;
+     border-radius: 20px 20px 0px 0px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 300;
+     font-size: 12px;
+     line-height: 18px;
+     text-indent: 10px;
+     /* identical to box height */
+
+     display: flex;
+     align-items: center;
+     text-align: center;
+
+     color: #FFF4E3;
+}
+
+.container .N {
+     position: absolute;
+     width: 292px;
+     height: 44px;
+     left: 37px;
+     top: 339px;
+
+     background: rgba(255, 229, 153, 0.53);
+     border-radius: 0px 0px 20px 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 14px;
+     line-height: 21px;
+     display: flex;
+     align-items: center;
+     text-align: right;
+     text-indent: 15px;
+
+     color: #561A4B;
+}
+
+.container .buttonN {
+     position: absolute;
+     width: 96px;
+     height: 19px;
+     left: 216px;
+     top: 352px;
+
+     background: #FFF4E3;
+     border: 1px solid #561A4B;
+     /* box-sizing: border-box; */
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     z-index: 1;
+
+     color: #561A4B;
+     cursor: pointer;
+}
+
+.container .buttonN {
+     position: absolute;
+     width: 96px;
+     height: 19px;
+     left: 216px;
+     top: 352px;
+
+     background: #FFF4E3;
+     border: 1px solid #561A4B;
+     /* box-sizing: border-box; */
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     z-index: 1;
+     text-indent: 10px;
+
+     color: #561A4B;
+     cursor: pointer;
+}
+
+.container .buttonN2 {
+     position: absolute;
+     width: 19px;
+     height: 19px;
+     left: 294px;
+     top: 352px;
+
+     background: #561A4B;
+     border-radius: 50%;
+     z-index: 1;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 9px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     z-index: 1;
+
+     color: #FFFFFF;
+     cursor: pointer;
+}
+
+.container .dayBeforeN {
+     font-family: Poppins;
+     font-style: italic;
+     font-weight: bold;
+     font-size: 14px;
+     line-height: 21px;
+
+     color: #561A4B;
+}
+
+.container .dayBeforeN .N-1 {
+     background: rgba(255, 229, 153, 0.53);
+     border-radius: 20px;
+     position: absolute;
+     width: 292px;
+     height: 48px;
+     left: 37px;
+     top: 394px;
+     display: flex;
+     align-items: center;
+     text-align: right;
+     text-indent: 15px;
+}
+
+.container .dayBeforeN .N-2 {
+     background: rgba(255, 229, 153, 0.53);
+     border-radius: 20px;
+     position: absolute;
+     width: 292px;
+     height: 48px;
+     left: 37px;
+     top: 452px;
+     display: flex;
+     align-items: center;
+     text-align: right;
+     text-indent: 15px;
+}
+
+.container .buttonBeforeN .button1-1 {
+     position: absolute;
+     width: 96px;
+     height: 21px;
+     left: 216px;
+     top: 408px;
+
+     background: #FFF4E3;
+     border: 1px solid #561A4B;
+     /* box-sizing: border-box; */
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: left;
+     z-index: 1;
+     text-indent: 10px;
+
+     color: #561A4B;
+     cursor: pointer;
+}
+
+.container .buttonBeforeN .button1-2 {
+     position: absolute;
+     width: 19px;
+     height: 21px;
+     left: 294px;
+     top: 408px;
+
+     background: #561A4B;
+     border-radius: 50%;
+     
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 9px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     z-index: 1;
+
+     color: #FFFFFF;
+     cursor: pointer;
+}
+
+.container .buttonBeforeN .button2-1 {
+     position: absolute;
+     width: 96px;
+     height: 21px;
+     left: 216px;
+     top: 466px;
+
+     background: #FFF4E3;
+     border: 1px solid #561A4B;
+     /* box-sizing: border-box; */
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: left;
+     z-index: 1;
+     text-indent: 10px;
+
+     color: #561A4B;
+     cursor: pointer;
+}
+
+.container .buttonBeforeN .button2-2 {
+     position: absolute;
+     width: 19px;
+     height: 21px;
+     left: 294px;
+     top: 466px;
+
+     background: #561A4B;
+     border-radius: 50%;
+     
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 9px;
+     line-height: 12px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     z-index: 1;
+
+     color: #FFFFFF;
+     cursor: pointer;
+}
+
+.container .before {
+     position: absolute;
+     width: 96px;
+     height: 21px;
+     left: 217px;
+     top: 517px;
+
+     background: #FFFFFF;
+     border: 1px solid #561A4B;
+     box-sizing: border-box;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 8px;
+     line-height: 12px;
+     text-align: center;
+
+     color: #561A4B;
+     cursor: pointer;
+}
+
+.container .goToCheck {
+     position: absolute;
+     width: 131px;
+     height: 35px;
+     left: 37px;
+     top: 575px;
+
+     background: #561A4B;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500px;
+     font-size: 9px;
+     line-height: 18px;
+     text-align: center;
+
+     color: #FFF4E3;
+     cursor: pointer;
+}
+
+.container .consult {
+     position: absolute;
+     width: 131px;
+     height: 35px;
+     left: 198px;
+     top: 575px;
+
+     background: #561A4B;
+     border-radius: 20px;
+
+     font-family: Poppins;
+     font-style: normal;
+     font-weight: 500px;
+     font-size: 9px;
+     line-height: 18px;
+     text-align: center;
+
+     color: #FFF4E3;
+     cursor: pointer;
+}
