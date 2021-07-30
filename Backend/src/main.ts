@@ -1,6 +1,8 @@
 import express, { Request, Response } from 'express';
 import log4js from 'log4js';
 import errorHandler from 'errorhandler';
+import passport from 'passport';
+import cookieParser from 'cookie-parser';
 
 import { defaultPort, apiVersion } from './configs/server';
 import routes from './routes/api_v1';
@@ -26,6 +28,9 @@ function main() {
   app.use(express.static('./public'));
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
+
+  app.use(cookieParser());
+  app.use(passport.initialize());
 
   // TODO: Swagger Documentation
   // const swaggerDocument = YAML.load(path.resolve(__dirname, 'documentation/swagger.yml'));

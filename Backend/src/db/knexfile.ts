@@ -9,7 +9,7 @@
  * Database connection configuration.
  */
 export const connection = {
-  host: process.env.MYSQL_HOST || '0.0.0.0',
+  host: '172.21.0.1',
   port: process.env.MYSQL_PORT || 3306,
   database: process.env.MYSQL_DATABASE || 'virtual-hospital',
   user: process.env.MYSQL_USER || 'admin',
