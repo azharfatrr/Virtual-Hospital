@@ -6,6 +6,3 @@ node_modules
 
 # log folder
 log
-
-# private keys
-id_rsa_priv.pem
