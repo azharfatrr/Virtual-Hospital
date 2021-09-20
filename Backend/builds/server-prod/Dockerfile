@@ -3,6 +3,7 @@ FROM node:14
 # Install global files
 RUN ["yarn", "global", "add",  "knex"]
 RUN ["yarn", "global", "add",  "typescript"]
+RUN ["yarn", "global", "add",  "ts-node"]
 RUN ["yarn", "global", "add",  "pm2"]
 
 # Create app directory.
