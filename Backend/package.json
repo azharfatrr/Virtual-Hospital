@@ -6,9 +6,9 @@
   "scripts": {
     "start": "ts-node src/main.ts",
     "dev": "nodemon --watch src --exec ts-node src/main.ts",
-    "prod": "pm2-runtime start 'ts-node src/main.ts' --name 'Virtual Hospital'",
+    "prod": "pm2 start 'ts-node src/main.ts' --name 'Virtual Hospital'",
     "build": "tsc && cp -r ./src/documentation/swagger.yml ./dist/documentation",
-    "pm-start": "pm2-runtime  dist/main.js",
+    "pm-start": "pm2 dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:unit-ts": "ENV_FILE=.env jest ./src/handlers/tests/*.ts",
     "test:seed-ts": "yarn gen-seeds && yarn test:unit-ts",
