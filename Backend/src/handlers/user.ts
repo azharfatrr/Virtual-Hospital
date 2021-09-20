@@ -73,7 +73,7 @@ export const getUserById = async (req: Request, res: Response) => {
       });
     }
 
-    // Query all user from database.
+    // Query user from database.
     const user = await User.query().findById(userId);
     // Check if user is found.
     if (!user) {

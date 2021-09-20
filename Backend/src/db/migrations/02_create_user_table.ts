@@ -10,7 +10,7 @@ export async function up(knex: Knex): Promise<void> {
     table.string('salt').notNullable();
     table.string('picture');
     table.string('email').notNullable();
-    table.string('device_Id');
+    table.string('device_id').references('id').inTable('device').onDelete('SET NULL');
     table.string('role').notNullable().defaultTo('user');
     table.timestamps(true, true);
   });

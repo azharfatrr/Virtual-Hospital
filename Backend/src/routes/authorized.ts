@@ -5,6 +5,7 @@
 
 import express from 'express';
 
+import { deleteDeviceById } from '../handlers/device';
 import { isAuthorized } from '../configs/passport';
 import {
   deleteUser, getUserById, patchDeviceId,
@@ -22,6 +23,8 @@ r.get('/users/:userId', isAuthorized, getUserById);
 r.delete('/users/:userId', isAuthorized, deleteUser);
 // Patch a user's device Id.
 r.patch('/users/:userId/devices', isAuthorized, patchDeviceId);
+// Patch a user's device Id.
+r.delete('/users/:userId/devices', isAuthorized, deleteDeviceById);
 
 // Export the router.
 export default r;

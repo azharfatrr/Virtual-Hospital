@@ -4,18 +4,17 @@ import Generic from './Generic';
  * Device is the model for IoT devices that connect to the server.
  */
 class Device extends Generic {
-  // The id of device that used by the user.
-  deviceId!: string;
-
   roomTemp: number;
 
-  roomRH: number;
+  roomRh: number;
 
   userTemp: number;
 
-  userSpO2: number;
+  userSpo2: number;
 
-  userBPM: number;
+  userBpm: number;
+
+  condition: string;
 
   /**
   * Type check that will validate if the input is a valid new user.
@@ -23,20 +22,23 @@ class Device extends Generic {
   public static isDevice = (input: any): input is Device => {
     try {
       // Validate that each input properties are in the schema.
-      const validProperties = ['deviceId', 'roomTemp', 'roomRH', 'userTemp', 'userSpO2', 'userBPM'];
-      input.forEach((property: string) => {
-        if (!validProperties.includes(property)) {
-          throw new Error(`Invalid property: ${property}`);
-        }
-      });
+      const validProperties = ['id', 'roomTemp', 'roomRh', 'userTemp', 'userSpo2',
+        'userBpm', 'condition'];
+      const inputProperties = Object.keys(input);
+
+      const valid = inputProperties.every((property) => validProperties.includes(property));
+      if (!valid) {
+        throw Error;
+      }
 
       // Validate the type of input
-      if (!input.deviceId || typeof input.deviceId !== 'string') return false;
-      if (input.deviceId && typeof input.roomTemp !== 'number') return false;
-      if (input.deviceId && typeof input.roomRH !== 'number') return false;
-      if (input.deviceId && typeof input.userTemp !== 'number') return false;
-      if (input.deviceId && typeof input.userSpO2 !== 'number') return false;
-      if (input.deviceId && typeof input.userBPM !== 'number') return false;
+      if (!input.id || typeof input.id !== 'string') return false;
+      if (input.roomTemp && typeof input.roomTemp !== 'number') return false;
+      if (input.roomRh && typeof input.roomRh !== 'number') return false;
+      if (input.userTemp && typeof input.userTemp !== 'number') return false;
+      if (input.userSpo2 && typeof input.userSpo2 !== 'number') return false;
+      if (input.userBpm && typeof input.userBpm !== 'number') return false;
+      if (input.condition && typeof input.condition !== 'string') return false;
 
       return true;
     } catch (err) {
@@ -49,7 +51,5 @@ class Device extends Generic {
     return 'device';
   }
 }
-
-
 
 export default Device;
