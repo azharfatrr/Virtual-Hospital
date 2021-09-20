@@ -38,6 +38,15 @@ function main() {
 
   // TODO: Swagger Documentation
   // const swaggerDocument = YAML.load(path.resolve(__dirname, 'documentation/swagger.yml'));
+  app.post('/test', (req, res) => {
+    res.status(202).json({
+      apiVersion,
+      error: {
+        code: 202,
+        message: 'wtf!',
+      },
+    });
+  });
 
   // Routing Endpoint.
   app.use('/v1', routes);
