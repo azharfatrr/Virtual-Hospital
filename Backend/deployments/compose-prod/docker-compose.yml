@@ -11,7 +11,7 @@ services:
     # Building Docker File.
     build:
       context: ../../
-      dockerfile: builds/server/Dockerfile
+      dockerfile: builds/server-prod/Dockerfile
     # Including env file.
     env_file: ../../.env
     # Ports for connecting Docker Container with outside world.

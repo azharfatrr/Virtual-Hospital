@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/main.js",
     "dev": "nodemon --watch src --exec ts-node src/main.ts",
-    "prod": "pm2-runtime start pm2.json",
+    "prod": "pm2-runtime start 'ts-node src/main.ts' --name 'Virtual Hospital'",
     "build": "tsc && cp -r ./src/documentation/swagger.yml ./dist/documentation",
     "pm-start": "pm2-runtime  dist/main.js",
     "up-dev": "docker-compose -p virtual-hospital -f deployments/compose/docker-compose.yml up",
