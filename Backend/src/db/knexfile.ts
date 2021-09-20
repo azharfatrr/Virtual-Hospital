@@ -1,3 +1,6 @@
+// Read the configs from env file.
+require('dotenv').config({ path: `${__dirname}/../../.env` });
+
 /**
  * KnexFile is the configuration file for 3 types of functions:
  * 1. Knex migration server.
