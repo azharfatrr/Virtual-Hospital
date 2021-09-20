@@ -40,7 +40,7 @@ function main() {
   // const swaggerDocument = YAML.load(path.resolve(__dirname, 'documentation/swagger.yml'));
 
   // Routing Endpoint.
-  app.use('/api/v1', routes);
+  app.use('/v1', routes);
   // TODO: Swagger Documentation
   // app.use('/docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
