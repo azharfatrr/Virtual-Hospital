@@ -12,6 +12,10 @@ body {
      border-radius: 30px;
 }
 
+p {
+     font-family: Poppins;
+}
+
 .header {
      position: relative;
      width: 360px;
@@ -99,7 +103,7 @@ body {
 
 .container .indikator1 .suhu {
      position: absolute;
-     width: 206px;
+     width: 306px;
      height: 52px;
      left: 32px;
      top: 165px;
@@ -155,7 +159,7 @@ body {
 
 .container .indikator2 .nadi {
      position: absolute;
-     width: 207px;
+     width: 306px;
      height: 52px;
      left: 31px;
      top: 269px;
@@ -210,7 +214,7 @@ body {
 
 .container .indikator3 .saturasi {
      position: absolute;
-     width: 207px;
+     width: 306px;
      height: 52px;
      left: 32px;
      top: 374px;
@@ -265,7 +269,7 @@ body {
 
 .container .indikator4 .tensi {
      position: absolute;
-     width: 207px;
+     width: 306px;
      height: 52px;
      left: 31px;
      top: 476px;
