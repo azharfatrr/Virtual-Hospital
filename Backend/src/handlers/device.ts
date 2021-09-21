@@ -134,8 +134,6 @@ export const updateDeviceById = async (req: Request, res: Response) => {
     // Get the params from the request.
     const { deviceId } = req.params;
 
-    console.log(req.body);
-
     // Validate the input.
     const errors = new ErrorContainer();
 
