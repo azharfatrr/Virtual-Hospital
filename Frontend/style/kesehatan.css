@@ -8,7 +8,7 @@ body {
      margin-left: auto;
      margin-right: auto;
 
-     background: #fff4e3;
+     background: #e5e5e5;
      border-radius: 30px;
 }
 
@@ -24,7 +24,7 @@ p {
      top: 0px;
      border-radius: 20px;
 
-     background: #561A4B;
+     background: #089BAB;
 }
 
 .header .logo {
@@ -59,7 +59,7 @@ p {
      display: flex;
      align-items: center;
 
-     color: #561A4B;
+     color: #089BAB;
 }
 
 .container .text2 {
@@ -77,7 +77,7 @@ p {
      display: flex;
      align-items: center;
 
-     color: #561A4B;
+     color: #089BAB;
 }
 
 .container .indikator1 .text-suhu {
@@ -98,7 +98,7 @@ p {
      align-items: center;
      text-align: center;
 
-     color: #000000;
+     color: #089BAB;
 }
 
 .container .indikator1 .suhu {
@@ -108,9 +108,10 @@ p {
      left: 32px;
      top: 165px;
      padding-left: 10px;
-     border: #000000;
+     border-color: #089BAB;
+     border-style: solid;
 
-     background: rgba(255, 229, 153, 0.53);
+     background: #e5e5e5;
      border-radius: 20px;
 }
 
@@ -154,7 +155,7 @@ p {
      /* identical to box height */
      text-align: left;
 
-     color: #000000;
+     color: #089BAB;
 }
 
 .container .indikator2 .nadi {
@@ -165,9 +166,11 @@ p {
      top: 269px;
      padding-left: 10px;
 
-     background: rgba(255, 229, 153, 0.53);
+     /* background: rgba(255, 229, 153, 0.53); */
+     background-color: #e5e5e5;
      border-radius: 20px;
-     border: #000000;
+     border: #089BAB;
+     border-style: solid;
 }
 
 .container .indikator2 .button-nadi {
@@ -209,7 +212,7 @@ p {
      align-items: center;
      text-align: center;
 
-     color: #000000;
+     color: #089BAB;
 }
 
 .container .indikator3 .saturasi {
@@ -220,9 +223,11 @@ p {
      top: 374px;
      padding-left: 10px;
 
-     background: rgba(255, 229, 153, 0.53);
+     /* background: rgba(158, 153, 138, 0.53); */
+     background-color: #e5e5e5;
      border-radius: 20px;
-     border: #000000;
+     border-color: #089BAB;
+     border-style: solid;
 }
 
 .container .indikator3 .button-saturasi {
@@ -264,7 +269,7 @@ p {
      align-items: center;
      text-align: center;
 
-     color: #000000;
+     color: #089BAB;
 }
 
 .container .indikator4 .tensi {
@@ -275,9 +280,11 @@ p {
      top: 476px;
      padding-left: 10px;
 
-     background: rgba(255, 229, 153, 0.53);
+     /* background: rgba(255, 229, 153, 0.53); */
+     background-color: #e5e5e5;
      border-radius: 20px;
-     border: #000000;
+     border-color: #089BAB;
+     border-style: solid;
 }
 
 .container .indikator4 .button-tensi {
@@ -308,7 +315,7 @@ p {
      left: 27px;
      top: 573px;
 
-     background: #FFE599;
+     background: #e5e5e5;
      border-radius: 20px;
 
      font-family: Poppins;
@@ -317,7 +324,7 @@ p {
      font-size: 14px;
      line-height: 21px;
      text-align: center;
-     color: #000000;
+     color: #089BAB;
      cursor: pointer;
 }
 
@@ -328,7 +335,7 @@ p {
      left: 185px;
      top: 573px;
 
-     background: #561A4B;
+     background: #089BAB;
      border-radius: 20px;
 
      font-family: Poppins;
@@ -338,6 +345,6 @@ p {
      line-height: 21px;
      text-align: center;
 
-     color: #FFF4E3;
+     color: #e5e5e5;
      cursor: pointer;
 }

@@ -8,7 +8,7 @@ body {
      margin-left: auto;
      margin-right: auto;
 
-     background: #FFF4E3;
+     background: #E5E5E5;
      /* border-radius: 30px; */
 }
 
@@ -22,7 +22,7 @@ body {
      height: 42px;
      border-radius: 20px;
 
-     background: #561A4B;
+     background: #089BAB;
 }
 
 .header .logo {
@@ -68,7 +68,7 @@ body {
      display: flex;
      align-items: center;
 
-     color: #561A4B;
+     color: #089BAB;
 }
 
 .container .text2 {
@@ -87,7 +87,7 @@ body {
      display: flex;
      align-items: center;
 
-     color: #561A4B;
+     color: #089BAB;
 }
 
 .container .indikator1 .box1 {
@@ -98,8 +98,10 @@ body {
      top: 181px;
      margin-left: 300px;
 
-     background: rgba(255, 205, 57, 0.53);
+     background: #fff;
      border-radius: 20px;
+     border-style: solid;
+     border-color: #089BAB;
 }
 
 .container .indikator1 .ind1 {
@@ -121,7 +123,7 @@ body {
      align-items: center;
      text-align: center;
 
-     color: #000000;
+     color: #ADADB1;
 }
 
 .container .indikator1 .checkbox1 {
@@ -135,7 +137,7 @@ body {
      text-align: center;
      font-family: Poppins;
 
-     background: rgba(255, 229, 153, 0.53);
+     background: #fff;
      /* transform: scale(4.5); */
      border-radius: 20px;
      
@@ -149,7 +151,10 @@ body {
      top: 295px;
      margin-left: 300px;
 
-     background: rgba(255, 205, 57, 0.53);
+     /* background: rgba(255, 205, 57, 0.53); */
+     background: #fff;
+     border-style: solid;
+     border-color: #089BAB;
      border-radius: 20px;
 }
 
@@ -172,7 +177,7 @@ body {
      align-items: center;
      text-align: center;
 
-     color: #000000;
+     color: #ADADB1;
 }
 
 .container .indikator2 .checkbox2 {
@@ -186,7 +191,8 @@ body {
      text-align: center;
      font-family: Poppins;
 
-     background: rgba(255, 229, 153, 0.53);
+     /* background: rgba(255, 229, 153, 0.53); */
+     background: #fff;
      /* transform: scale(4.5); */
      border-radius: 20px;
 }
@@ -199,7 +205,9 @@ body {
      top: 409px;
      margin-left: 300px;
 
-     background: rgba(255, 205, 57, 0.53);
+     /* background: rgba(255, 205, 57, 0.53); */
+     border-style: solid;
+     border-color: #089BAB;
      border-radius: 20px;
 }
 
@@ -222,7 +230,7 @@ body {
      align-items: center;
      text-align: center;
 
-     color: #000000;
+     color: #ADADB1;
 }
 
 .container .indikator3 .checkbox3 {
@@ -249,7 +257,7 @@ body {
      top: 530px;
      margin-left: 300px;
 
-     background: #FFE599;
+     background: #E5E5E5;
      border-radius: 20px;
 
      font-family: Poppins;
@@ -260,7 +268,7 @@ body {
 
      text-align: center;
 
-     color: #000000;
+     color: #089BAB;
      cursor: pointer;
 }
 
@@ -272,7 +280,7 @@ body {
      top: 530px;
      margin-left: 300px;
 
-     background: #561A4B;
+     background: #089BAB;
      border-radius: 20px;
 
      font-family: Poppins;
@@ -283,6 +291,6 @@ body {
      
      text-align: center;
 
-     color: #FFF4E3;
+     color: #E5E5E5;
      cursor: pointer;
 }
